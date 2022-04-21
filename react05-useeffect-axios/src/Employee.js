@@ -27,7 +27,9 @@ function Employee() {
   return (
     <div>
       {employees.map((employee) => (
-        <li>{employee.id}</li>
+        <div key={employee.id}>
+          <h1>{`Name:${employee.name} ID:${employee.id}`}</h1>
+        </div>
       ))}
     </div>
   );
