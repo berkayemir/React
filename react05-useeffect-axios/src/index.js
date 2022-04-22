@@ -5,13 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Employee from './Employee';
 import Card from './Card';
+import ApiTest2 from './ApiTest2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <Employee/> */}
-    <Card/>
+    {/* <Card/> */}
+    <ApiTest2/>
   </React.StrictMode>
 );
 
