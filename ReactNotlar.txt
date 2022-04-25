@@ -1,0 +1,5 @@
+npm install cors mongoose express nodemon =>ihtiyacımız olan paketler
+
+-----
+node index.js =>çalıştırma komutu
+-----
