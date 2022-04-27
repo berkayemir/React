@@ -13,13 +13,13 @@ function App() {
       .get("http://localhost:3050/getEmployee")
       .then((response) => setEmployees(response.data))
       .catch((err) => console.log(err));
-  }, []);
+  }, [employees]);
 
   const createEmployee=()=>{
     axios.post("http://localhost:3050/createEmployee",{
-      name:"",
-      age:0,
-      username:""
+      name:name,
+      age:age,
+      username:username
     }).then((res)=>{
       alert("Employee Created")
     })
@@ -32,7 +32,9 @@ function App() {
           <h1>Name: {employee.name}</h1>
           <h1>Age: {employee.age}</h1>
           <h1>Username: {employee.username}</h1>
+          <hr />
         </div>
+        
       ))}
       <br />
       <br />
@@ -53,7 +55,7 @@ function App() {
             placeholder="Kullanıcı adı giriniz"
             onChange={(e) => setUsername(e.target.value)}
           />
-          <button>Create Employee</button>
+          <button onClick={createEmployee}>Create Employee</button>
         </center>
       </div>
     </div>
